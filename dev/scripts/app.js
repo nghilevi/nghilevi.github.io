@@ -336,7 +336,7 @@ app.config(['$routeProvider',function ($routeProvider) {
 app.controller('menuLink', ['$scope','$location',function($scope,$location) {
   $("#menu").click(function() {
     $('html,body').scrollTop(0);
-    $(".menu .pointer").hide()
+    $(".menu .pointer").hide();
   });
   $scope.location=$location;
   $scope.$watch('location.path()', function(path) {
@@ -358,6 +358,7 @@ app.controller('about-me', ['$scope', function($scope) {
       $('html, body').animate({
           scrollTop: 310
       }, 400);
+      $(".menu .pointer").hide();
   });
 
   $(".avt").hover(function() {

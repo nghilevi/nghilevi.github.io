@@ -4,6 +4,7 @@ app.controller('about-me', ['$scope', function($scope) {
       $('html, body').animate({
           scrollTop: 310
       }, 400);
+      $(".menu .pointer").hide();
   });
 
   $(".avt").hover(function() {

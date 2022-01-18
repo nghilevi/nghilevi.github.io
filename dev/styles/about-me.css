@@ -44,6 +44,18 @@
     background: url("../img/slide-background/bcg_slide-1.jpg") no-repeat center center; /*6, 18 */
     background-size: cover;
 }
+
+.avt .pointer{
+    font-size: 1.5rem;
+    position: absolute;
+
+    left: 35%;
+    top: 43%;
+
+    -webkit-animation: action 1s infinite  alternate;
+    animation: action 1s infinite  alternate;
+}
+
 .intro{
     position: absolute;
     left:50%;

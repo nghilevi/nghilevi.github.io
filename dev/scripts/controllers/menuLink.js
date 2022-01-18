@@ -1,7 +1,7 @@
 app.controller('menuLink', ['$scope','$location',function($scope,$location) {
   $("#menu").click(function() {
     $('html,body').scrollTop(0);
-    $(".menu .pointer").hide()
+    $(".menu .pointer").hide();
   });
   $scope.location=$location;
   $scope.$watch('location.path()', function(path) {
