@@ -11,6 +11,25 @@
     color: #fff;
 }
 
+/* ------------- social-media ----------------- */
+.social-media img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.social-media img:hover{
+    opacity: 0.8;
+    border: 1px solid white;
+}
+.social-media a:hover,
+.social-media a:visited,
+.social-media a:link,
+.social-media a:active{
+    text-decoration: none; 
+}
+
+/* ------------------------------------ */
+
 .slides-container{
     width:100%;
     height: 100%;
@@ -142,16 +161,10 @@
     font-weight: bold;
 }
 
-.intro .social-media-links {
+.intro .social-media {
     display: flex;
     margin-left: -175px;
     column-gap: 5px;
-}
-
-.intro .social-media-links img{
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
 }
 
 /* --------------------- Slide 2 --------------------- 1*/
@@ -209,18 +222,13 @@
     margin-bottom: 200px;
 }
 
-.slide-4  .social-media img{
+.slide-4 .social-media img{
     width: 40px;
     height: 40px;
     border: 1px solid white;
 }
 
-.slide-4  .social-media img:hover{
-    opacity: 0.8;
-    border: 1px solid white;
-}
-
-.slide-4  .my-address{
+.slide-4 .my-address{
     font-size: 1em;
     font-style: italic;
     line-height: 0;
@@ -283,7 +291,7 @@
     .slide-2 .caption p{
         margin: 6% 5% 0 5% ;
     }
-    .slide-2 .caption.part2 p,{
+    .slide-2 .caption.part2 p{
         font-size: 1em;
     }
 
