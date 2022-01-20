@@ -225,10 +225,10 @@ a.small {
     width: 30px;
     height: 30px;
     cursor: pointer;
+    border: 1px solid white;
 }
 .social-media img:hover{
     opacity: 0.8;
-    border: 1px solid white;
 }
 .social-media a:hover,
 .social-media a:visited,
