@@ -30,7 +30,7 @@
 }
 
 /* Menu */
-#menu{
+.menu{
   -webkit-box-shadow: 0 0 10px #888;
      -moz-box-shadow: 0 0 10px #888;
           box-shadow: 0 0 10px #888;
@@ -45,15 +45,15 @@
   text-align: center;
 }
 
-#menu a{
+.menu a{
   color: #18bc9c; /*Bootstrap link corlor*/
   text-decoration: none;
 }
-#menu a:hover{
+.menu a:hover{
     color: #008f7a;  
 }
 
-#menu:hover{
+.menu:hover{
     -webkit-box-shadow: 0 0 14px #888;
      -moz-box-shadow: 0 0 14px #888;
           box-shadow: 0 0 14px #888;
