@@ -343,7 +343,6 @@ app.controller('menuLink', ['$scope','$location',function($scope,$location) {
     if($scope.location.path()=="/my-work"){
       $scope.menuLink="#about-me";
       $scope.menuText="About Me";
-      
     }else{
       $scope.menuLink="#my-work";
       $scope.menuText="My Work";
