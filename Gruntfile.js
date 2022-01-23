@@ -165,9 +165,9 @@ module.exports = function(grunt){
 		  //         // Set to true to enable the following options…
 		  //         expand: true,
 		  //         cwd: 'dev/img/',
-		  //         src: ['**/*.jpg'],
+		  //         src: ['**/*.png'],
 		  //         dest: 'dist/img/',
-		  //         ext: '.jpg'
+		  //         ext: '.png'
 		  //       }
 		  //     ]
 		  //   }
