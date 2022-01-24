@@ -385,50 +385,6 @@
         "rating": 3
     },
     {
-        "_id": "5assd1f",
-        "name": "uiw-slider",
-        "cat": "Web, NPM",
-        "year": 2021,
-        "technologies": "TypeScript, StencilJS, Web component",
-        "links": [
-            {
-                "type": "github",
-                "url": "https://github.com/vinhnghi223/uiw-slider"
-            }
-        ],
-        "description": "A lightweight, simple-to-use slider allowing users to make selections from a range of values.",
-        "rankId": 14,
-        "rating": 3
-    },
-    {
-        "_id": "assda",
-        "name": "uiw-input-number",
-        "cat": "Web, NPM",
-        "year": 2021,
-        "technologies": "TypeScript, StencilJS, Web component",
-        "links": [
-            {
-                "type": "trend",
-                "url": "https://www.npmtrends.com/foundation-apps-modal-vs-gulp-release-easy-vs-moment-calendar-2-vs-ng-checkbox-vs-ng-paginator-vs-uiw-input-number"
-            },
-            {
-                "type": "demo",
-                "url": "https://vinhnghi223.github.io/uiw-input-number/"
-            },
-            {
-                "type": "github",
-                "url": "https://github.com/vinhnghi223/uiw-input-number"
-            },
-            {
-                "type": "npm",
-                "url": "https://www.npmjs.com/package/uiw-input-number"
-            }
-        ],
-        "description": "The number input component is used for entering numeric values and includes controls for incrementally increasing or decreasing the value.",
-        "rankId": 15,
-        "rating": 3
-    },
-    {
         "_id": "ss",
         "name": "ui-percentage-bar",
         "cat": "Web, NPM",
