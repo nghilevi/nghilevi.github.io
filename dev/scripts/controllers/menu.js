@@ -1,4 +1,4 @@
-app.controller('menuLink', ['$scope','$location',function($scope,$location) {
+app.controller('menu', ['$scope','$location',function($scope,$location) {
   $(".menu").click(function() {
     $('html,body').scrollTop(0);
     $(".menu .pointer").hide();

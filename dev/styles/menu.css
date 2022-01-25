@@ -1,5 +1,5 @@
 /* ---------------------------- Fixed element ----------------------- */
-/* Ribbon */
+/* --------------- Ribbon --------------- */
 .ribbon {
   -webkit-transform: rotate(45deg);
      -moz-transform: rotate(45deg);
@@ -29,7 +29,7 @@
   text-decoration: none;
 }
 
-/* Menu */
+/* --------------- Menu --------------- */
 .menu{
   -webkit-box-shadow: 0 0 10px #888;
      -moz-box-shadow: 0 0 10px #888;
@@ -50,7 +50,7 @@
   text-decoration: none;
 }
 .menu a:hover{
-    color: #008f7a;  
+  color: #008f7a;  
 }
 
 .menu:hover{

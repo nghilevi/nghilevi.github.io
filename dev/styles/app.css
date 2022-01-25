@@ -123,7 +123,7 @@ a.small {
   font-size: .9rem;
 }
 /* ---------------------------- Fixed element ----------------------- */
-/* Ribbon */
+/* --------------- Ribbon --------------- */
 .ribbon {
   -webkit-transform: rotate(45deg);
      -moz-transform: rotate(45deg);
@@ -153,7 +153,7 @@ a.small {
   text-decoration: none;
 }
 
-/* Menu */
+/* --------------- Menu --------------- */
 .menu{
   -webkit-box-shadow: 0 0 10px #888;
      -moz-box-shadow: 0 0 10px #888;
@@ -174,7 +174,7 @@ a.small {
   text-decoration: none;
 }
 .menu a:hover{
-    color: #008f7a;  
+  color: #008f7a;  
 }
 
 .menu:hover{

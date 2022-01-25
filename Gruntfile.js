@@ -16,7 +16,7 @@ module.exports = function(grunt){
 			styles: {
 				src: [
 					'dev/styles/reset.css',
-					'dev/styles/fixed-element.css',
+					'dev/styles/menu.css',
 					'dev/styles/fonts.css',
 					'dev/styles/about-me.css',
 					'dev/styles/my-work.css',
@@ -28,7 +28,7 @@ module.exports = function(grunt){
 				src: [
 				'dev/scripts/directives/autocomplete.js',
 				'dev/scripts/angularapp.js',
-				'dev/scripts/controllers/menu-link.js',
+				'dev/scripts/controllers/menu.js',
 				'dev/scripts/controllers/about-me.js',
 				'dev/scripts/controllers/my-work.js',
 				],
