@@ -15,7 +15,7 @@ module.exports = function(grunt){
 		concat: {
 			styles: {
 				src: [
-					'src/styles/reset.css', // TODO be continue
+					// 'src/styles/reset.css', // TODO be continue
 
 					'dev/styles/reset.css',
 					'dev/styles/reset.css',
