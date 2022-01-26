@@ -1,0 +1,204 @@
+/* ---------------------- SEARCH ---------------------- */
+.search {
+  border: 1px solid black;
+  padding: 10px;
+  z-index: 20;
+  background-color: #D3D3D3;
+  text-align: center;
+}
+
+.search input {
+  font-family: callunaregular,Arial;
+  padding: 8px 0 8px 8px;
+  font-size: 1rem;
+  background: rgba(255,255,255,0.4);
+  border: 1px solid black;
+  outline: 0;
+}
+
+/* ---------------------- CARDS ---------------------- */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cards .card {
+  background: #E6F5F5;
+  margin: 0;
+  border: 1px solid black;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;  
+}
+
+.card:hover {
+  background: #FDF6E3;
+}
+
+/* Animation on typing */
+.card.ng-enter.ng-enter-active,
+.card.ng-leave{
+  opacity: 1;
+  overflow: hidden;
+}
+
+.card.ng-leave.ng-leave-active,
+.card.ng-enter{
+  opacity: 0;
+  overflow: hidden;
+}
+
+
+/* ---------------------- FLIPPER ---------------------- */
+
+.flipper {
+  position: relative;
+  cursor: pointer;
+  height: 20vw;
+}
+
+
+.flipper-front, 
+.flipper-back {
+  width: 100%;
+  height: 100%;
+}
+
+.flipper-front,
+.flipper-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+.flipper-back {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+/* click effect */
+.flipper.flipped .flipper-front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.flipper.flipped .flipper-back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+
+/* ---------------------- FLIPPER CUSTOM CONTENT ---------------------- */
+
+.flipper-content {
+  position: relative;
+  height: 100%;
+}
+
+.flipper-front .flipper-content {
+  text-align: center;
+  height: 100%;
+}
+
+.flipper-content h1 {
+  padding: 20px;
+  background-image: linear-gradient(to bottom, black, rgba(0,0,0,0));
+  font-size: 1.25em;
+  font-weight: bold;
+  margin-top: 0;
+  height: 70px;
+  color: white;
+}
+
+.flipper-content h2 {
+  font-size: 1.25rem;
+  line-height: 90%;
+  margin-top: 0;
+  color: black;
+}
+
+.flipper-back .flipper-content {
+  padding: 20px;
+}
+
+.flipper-back .flipper-content .links {
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  right: 0;
+}
+
+.flipper-back .flipper-content .link img {
+  border: 1px solid black;
+  display: block;
+  margin: 5px;
+  width: 40px;
+  height:auto;
+}
+
+.flipper-back .flipper-content .link img:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1); 
+  transition-duration: 0.25s;
+}
+
+
+/* ---------------------- SMALL SCREENS ---------------------- */
+
+/* medium screen: 2 COLUMNS */
+@media screen and (max-width:900px){
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .flipper {
+    height: 35vw;
+  }
+}
+/* temporary responsive font-size solution */
+@media screen and (max-width:1050px) and (min-width:900px){
+  .flipper-content h2 {
+    font-size: 0.9rem;
+  }
+  .flipper-content h3 {
+    font-size: 0.85rem;
+    line-height: 0.8rem;
+  }
+  .flipper-content p {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+/* narrow screen 1 COLUMN */
+@media screen and (max-width:750px){
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .flipper {
+    height: 40vw;
+  }
+}
+
+/* ---------------------- BACK-TO-TOP ---------------------- */
+#back-to-top{
+  position: fixed;
+  bottom: 0;
+  left: 50%; /* center of the page */
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 10px #888;
+     -moz-box-shadow: 0 0 10px #888;
+          box-shadow: 0 0 10px #888;
+}
+
+#back-to-top:hover{
+  opacity: 0.8;
+}
