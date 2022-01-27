@@ -15,9 +15,15 @@ module.exports = function(grunt){
 		concat: {
 			styles: {
 				src: [
-					// 'src/styles/reset.css', // TODO be continue
-
-					'dev/styles/reset.css',
+					/*
+					'src/common/styles/reset.css',
+					'src/common/components/menu/menu.css',
+					'src/assets/fonts/fonts.css',
+					'src/about-me/about-me.css',
+					'src/my-work/my-work.css',
+					'src/common/components/autocomplete/autocomplete.css',
+					*/
+					
 					'dev/styles/reset.css',
 					'dev/styles/menu.css',
 					'dev/styles/fonts.css',
@@ -25,17 +31,23 @@ module.exports = function(grunt){
 					'dev/styles/my-work.css',
 					'dev/styles/autocomplete.css'
 					],
-				dest: 'dev/styles/app.css'
+				dest: 'dev/styles/app.css' //'build/app.css'
 			},
 			scripts: {
 				src: [
+				/*'src/common/components/autocomplete.js',
+				'src/angularapp.js',
+				'src/common/components/menu/menu.js',
+				'src/about-me/about-me.js',
+				'src/my-work/my-work.js',*/
+				
 				'dev/scripts/directives/autocomplete.js',
 				'dev/scripts/angularapp.js',
 				'dev/scripts/controllers/menu.js',
 				'dev/scripts/controllers/about-me.js',
-				'dev/scripts/controllers/my-work.js',
+				'dev/scripts/controllers/my-work.js'
 				],
-				dest: 'dev/scripts/app.js'
+				dest: 'dev/scripts/app.js' //'build/app.js'
 			}
 		},
 		// sass: {
@@ -49,18 +61,21 @@ module.exports = function(grunt){
 		  main: {
 			files: [
 				// copy json
-				{src: 'dev/models/data.json', dest: 'dist/models/data.json'},
+				{	
+					src: 'dev/models/data.json', //'src/models/data.json', 
+					dest: 'dist/models/data.json'
+				},
 				// copy img
 				{
 					expand: true,
-					cwd: 'dev/img',
+					cwd: 'dev/img', //'src/assets/img',
 					src: '**',
 					dest: 'dist/img'
 				},
 				// copy fonts
 				{
 					expand: true,
-					cwd: 'dev/styles/fonts',
+					cwd: 'dev/styles/fonts', //'src/assets/fonts', 
 					src: '**',
 					dest: 'dist/styles/fonts'
 				},
@@ -71,14 +86,14 @@ module.exports = function(grunt){
 		uglify:{
 			scripts: {
 				files: {
-					'dist/scripts/app.min.js' : 'dev/scripts/app.js'
+					'dist/scripts/app.min.js' : 'dev/scripts/app.js' //'build/app.js'
 				}
 			}
 		},
 		cssmin: {
 			app: {
 				files: {
-					'dist/styles/app.min.css': 'dev/styles/app.css'
+					'dist/styles/app.min.css': 'dev/styles/app.css' //'build/app.css'
 				}
 			}
 		},
@@ -94,9 +109,9 @@ module.exports = function(grunt){
 					collapseWhitespace: true
 				},
 				files: {                                  
-					'dist/views/my-work.html': 'dev/views/my-work.html',
-					'dist/views/about-me.html': 'dev/views/about-me.html',
-					'dist/views/404.html': 'dev/views/404.html'
+					'dist/views/my-work.html': 'dev/views/my-work.html', //'src/my-work/my-work.html'
+					'dist/views/about-me.html': 'dev/views/about-me.html',//'src/about-me/about-me.html',
+					'dist/views/404.html': 'dev/views/404.html' //'src/404/404.html'
 				}
 			},
 			'index': {                                      
@@ -112,7 +127,7 @@ module.exports = function(grunt){
 		},
 		watch: {
 			scripts: {
-				files: 'dev/scripts/**/*.js',
+				files: 'dev/scripts/**/*.js', // 'src/**/*.js'
 				tasks: ['concat:scripts','uglify'],
 				options: {
 					spawn: false,
@@ -120,7 +135,7 @@ module.exports = function(grunt){
 				}
 			},
 			json:{
-				files: 'dev/models/data.json',
+				files: 'dev/models/data.json', // 'src/models/data.json'
 				tasks: ['copy','json-minify'],
 				options: {
 					spawn: false,
@@ -128,7 +143,7 @@ module.exports = function(grunt){
 				}
 			},
 			styles: {
-				files: 'dev/styles/**/*.css',
+				files: 'dev/styles/**/*.css', // 'src/**/*.css'
 				tasks: ['concat:styles','cssmin'],
 				options: {
 					spawn: false,
@@ -136,7 +151,7 @@ module.exports = function(grunt){
 				}
 			},
 			html:{
-				files: 'dev/views/**/*.html',
+				files: 'dev/views/**/*.html', // 'src/**/*.html'
 				tasks: ['htmlmin'],
 				options: {
 					spawn: false,
