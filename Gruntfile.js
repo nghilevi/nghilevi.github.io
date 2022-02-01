@@ -36,13 +36,15 @@ module.exports = function(grunt){
 			scripts: {
 				src: [
 				/*'src/common/components/autocomplete.js',
-				'src/angularapp.js',
+				'src/app.module.js',
+				'src/app.route.js',
 				'src/common/components/menu/menu.js',
 				'src/about-me/about-me.js',
 				'src/my-work/my-work.js',*/
 				
 				'dev/scripts/directives/autocomplete.js',
-				'dev/scripts/angularapp.js',
+				'dev/scripts/app.module.js',
+				'dev/scripts/app.route.js',
 				'dev/scripts/controllers/menu.js',
 				'dev/scripts/controllers/about-me.js',
 				'dev/scripts/controllers/my-work.js'
