@@ -31,25 +31,27 @@ module.exports = function(grunt){
 					'dev/styles/my-work.css',
 					'dev/styles/autocomplete.css'
 					],
-				dest: 'dev/styles/app.css' //'build/app.css'
+				//dest: 'dev/styles/app.css'
+				dest: 'docs/app.css'
 			},
 			scripts: {
 				src: [
-				/*'src/common/components/autocomplete.js',
-				'src/app.module.js',
-				'src/app.route.js',
-				'src/common/components/menu/menu.js',
-				'src/about-me/about-me.js',
-				'src/my-work/my-work.js',*/
-				
-				'dev/scripts/directives/autocomplete.js',
-				'dev/scripts/app.module.js',
-				'dev/scripts/app.route.js',
-				'dev/scripts/controllers/menu.js',
-				'dev/scripts/controllers/about-me.js',
-				'dev/scripts/controllers/my-work.js'
+					/*'src/common/components/autocomplete.js',
+					'src/app.module.js',
+					'src/app.route.js',
+					'src/common/components/menu/menu.js',
+					'src/about-me/about-me.js',
+					'src/my-work/my-work.js',*/
+					
+					'dev/scripts/directives/autocomplete.js',
+					'dev/scripts/app.module.js',
+					'dev/scripts/app.route.js',
+					'dev/scripts/controllers/menu.js',
+					'dev/scripts/controllers/about-me.js',
+					'dev/scripts/controllers/my-work.js'
 				],
-				dest: 'dev/scripts/app.js' //'build/app.js'
+				// dest: 'dev/scripts/app.js',
+				dest: 'docs/app.js'
 			}
 		},
 		// sass: {
@@ -64,22 +66,34 @@ module.exports = function(grunt){
 			files: [
 				// copy json
 				{	
-					src: 'dev/models/data.json', //'src/models/data.json', 
-					dest: 'dist/models/data.json'
+					//src: 'dev/models/data.json', 
+					src: 'src/models/data.json', 
+					// dest: 'dist/models/data.json'
+					dest: 'docs/models/data.json'
+				},
+				// copy js
+				{	
+					src: 'src/common/lib/skrollr.min.js',
+					dest: 'docs/skrollr.min.js'
 				},
 				// copy img
 				{
 					expand: true,
-					cwd: 'dev/img', //'src/assets/img',
+					// cwd: 'dev/img',
+					cwd: 'src/assets/img',
 					src: '**',
-					dest: 'dist/img'
+					// dest: 'dist/img',
+					//dest: 'img'
+					dest: 'docs/img'
 				},
 				// copy fonts
 				{
 					expand: true,
-					cwd: 'dev/styles/fonts', //'src/assets/fonts', 
+					// cwd: 'dev/styles/fonts'
+					cwd: 'src/assets/fonts', 
 					src: '**',
-					dest: 'dist/styles/fonts'
+					// dest: 'dist/styles/fonts',
+					dest: 'docs/fonts'
 				},
 			]
 		  },
@@ -88,20 +102,23 @@ module.exports = function(grunt){
 		uglify:{
 			scripts: {
 				files: {
-					'dist/scripts/app.min.js' : 'dev/scripts/app.js' //'build/app.js'
+					//'dist/scripts/app.min.js' : 'dev/scripts/app.js',
+					'docs/app.min.js' : 'docs/app.js'
 				}
 			}
 		},
 		cssmin: {
 			app: {
 				files: {
-					'dist/styles/app.min.css': 'dev/styles/app.css' //'build/app.css'
+					//'dist/styles/app.min.css': 'dev/styles/app.css',
+					'docs/app.min.css': 'docs/app.css'
 				}
 			}
 		},
 		'json-minify': { //not include copy
 		  build: {
-		    files: 'dist/models/data.json'
+		    //files: 'dist/models/data.json'
+			files: 'docs/models/data.json'
 		  }
 		},
 		htmlmin: {                                     
@@ -111,9 +128,14 @@ module.exports = function(grunt){
 					collapseWhitespace: true
 				},
 				files: {                                  
-					'dist/views/my-work.html': 'dev/views/my-work.html', //'src/my-work/my-work.html'
-					'dist/views/about-me.html': 'dev/views/about-me.html',//'src/about-me/about-me.html',
-					'dist/views/404.html': 'dev/views/404.html' //'src/404/404.html'
+					/*
+					'dist/views/my-work.html': 'dev/views/my-work.html',
+					'dist/views/about-me.html': 'dev/views/about-me.html',
+					'dist/views/404.html': 'dev/views/404.html'*/
+
+					'docs/dev/views/my-work.html': 'src/my-work/my-work.html',
+					'docs/dev/views/about-me.html': 'src/about-me/about-me.html',
+					'docs/dev/views/404.html': 'src/404/404.html'
 				}
 			},
 			'index': {                                      
@@ -123,7 +145,7 @@ module.exports = function(grunt){
 				files: {                                  
 					//'index-dist.html': 'index-dev.html',
 					//'index.html': 'index-dev.html',
-					'index.html': 'index-dev-dist.html'
+					'docs/index.html': 'index-dev-dist.html'
 				}
 			}
 		},
@@ -137,7 +159,8 @@ module.exports = function(grunt){
 				}
 			},
 			json:{
-				files: 'dev/models/data.json', // 'src/models/data.json'
+				// files: 'dev/models/data.json',
+				files: 'src/models/data.json',
 				tasks: ['copy','json-minify'],
 				options: {
 					spawn: false,

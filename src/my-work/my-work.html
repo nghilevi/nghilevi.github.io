@@ -23,7 +23,7 @@
         <div class="flipper-front" title="click me!">
           <div class="flipper-content"
               ng-attr-style="
-                background-image: url('dist/img/project-thumbnails/{{item.noImage ? 'no-image' : item.name}}.png');
+                background-image: url('./img/project-thumbnails/{{item.noImage ? 'no-image' : item.name}}.png');
                 background-size: cover
               ">
             <h1 title="Project Name">{{item.name}} ({{item.cat}})</h1>
@@ -41,7 +41,7 @@
             <div class="links">
               <div class="link" ng-repeat="link in item.links">
                   <a target="_blank" title="{{link.type}}" ng-href="{{link.url}}">
-                    <img  ng-src="dist/img/links/{{link.type}}.png">
+                    <img  ng-src="./img/links/{{link.type}}.png">
                   </a>
               </div>
             </div>
@@ -54,4 +54,4 @@
   </div>
 </div>
 
-<img id="back-to-top" src="dist/img/icons/back2top.png" alt="">
+<img id="back-to-top" src="./img/icons/back2top.png" alt="">

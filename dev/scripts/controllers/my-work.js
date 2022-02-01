@@ -72,7 +72,7 @@ app.factory('autocompleteArrServ', [function () {
       var loadData = function (savedData, mode) {
         if (mode != 'test') {
           if (!savedData) {
-            $http.get('dist/models/data.json').success(function (data) {
+            $http.get('models/data.json').success(function (data) {
               $scope.autocompleteData = processData(data);
               savedData = JSON.stringify($scope.projects);
               $scope.savedData = JSON.stringify($scope.projects);
