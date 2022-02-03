@@ -1,3 +1,91 @@
+var app = angular.module('vinhnghigithubioApp', [
+    'ngAnimate',
+    'ngResource',
+    'ngRoute',
+    'autocomplete'
+]);
+app.config(['$routeProvider',function ($routeProvider) {
+    $routeProvider
+      .when('/about-me', {
+        templateUrl: 'views/about-me.html',
+        controller: 'about-me'
+      })
+      .when('/my-work', {
+        templateUrl: 'views/my-work.html',
+        controller: 'my-work'
+      })
+      .otherwise({
+        redirectTo: '/about-me'
+      });
+  }]);
+  
+app.controller('menu', ['$scope','$location',function($scope,$location) {
+  $(".menu").click(function() {
+    $('html,body').scrollTop(0);
+    $(".menu .pointer").hide();
+  });
+  $scope.location=$location;
+  $scope.$watch('location.path()', function(path) {
+    if($scope.location.path()=="/my-work"){
+      $scope.menuLink="#about-me";
+      $scope.menuText="About Me";
+    }else{
+      $scope.menuLink="#my-work";
+      $scope.menuText="My Work";
+    }
+  });
+  
+}]);
+
+app.controller('about-me', ['$scope', function($scope) {
+  var s = skrollr.init();
+  $(".avt").click(function() {
+      $('html, body').animate({
+          scrollTop: 310
+      }, 400);
+      $(".avt .pointer").hide();
+  });
+
+  $(".avt").hover(function() {
+      $('.intro h1, .intro p').addClass("moving");
+  },function() {
+      $('.intro h1, .intro p').removeClass("moving");
+  });
+
+  
+  //Animation while scrolling
+  $(window).scroll(function() {
+    //console.log("Width: "+$(window).width());
+    //console.log($(this).scrollTop());
+    //Slide 1
+    if ($(this).scrollTop()>260){
+        $('.slide-1 .intro').fadeOut();
+     }else{
+      $('.slide-1 .intro').fadeIn();
+    }
+
+    //Slide 2
+    if ($(this).scrollTop()>=300 && $(this).scrollTop()<800){
+        $('.slide-2 .caption.part1').fadeIn();
+    }else{     
+        $('.slide-2 .caption.part1').fadeOut();
+    }
+
+    if ($(this).scrollTop()>=800 && $(this).scrollTop()<1300){
+        $('.slide-2 .caption.part2').fadeIn();
+    }else{     
+        $('.slide-2 .caption.part2').fadeOut();
+    }      
+
+    //Slide 3
+    if ($(this).scrollTop()>1450 && $(this).scrollTop()<2300){
+        $('.slide-3 .caption').fadeIn();
+    }else{     
+      $('.slide-3 .caption').fadeOut();
+    }
+   
+   });
+}]);
 // -------------------------------- autocomplete.js --------------------------------
 /* --- Made by justgoscha and licensed under MIT license --- */
 
@@ -308,94 +396,6 @@ autocomplete.directive('suggestion', function(){
   };
 });
 
-var app = angular.module('vinhnghigithubioApp', [
-    'ngAnimate',
-    'ngResource',
-    'ngRoute',
-    'autocomplete'
-]);
-app.config(['$routeProvider',function ($routeProvider) {
-    $routeProvider
-      .when('/about-me', {
-        templateUrl: 'dev/views/about-me.html',
-        controller: 'about-me'
-      })
-      .when('/my-work', {
-        templateUrl: 'dev/views/my-work.html',
-        controller: 'my-work'
-      })
-      .otherwise({
-        redirectTo: '/about-me'
-      });
-  }]);
-  
-app.controller('menu', ['$scope','$location',function($scope,$location) {
-  $(".menu").click(function() {
-    $('html,body').scrollTop(0);
-    $(".menu .pointer").hide();
-  });
-  $scope.location=$location;
-  $scope.$watch('location.path()', function(path) {
-    if($scope.location.path()=="/my-work"){
-      $scope.menuLink="#about-me";
-      $scope.menuText="About Me";
-    }else{
-      $scope.menuLink="#my-work";
-      $scope.menuText="My Work";
-    }
-  });
-  
-}]);
-
-app.controller('about-me', ['$scope', function($scope) {
-  var s = skrollr.init();
-  $(".avt").click(function() {
-      $('html, body').animate({
-          scrollTop: 310
-      }, 400);
-      $(".avt .pointer").hide();
-  });
-
-  $(".avt").hover(function() {
-      $('.intro h1, .intro p').addClass("moving");
-  },function() {
-      $('.intro h1, .intro p').removeClass("moving");
-  });
-
-  
-  //Animation while scrolling
-  $(window).scroll(function() {
-    //console.log("Width: "+$(window).width());
-    //console.log($(this).scrollTop());
-    //Slide 1
-    if ($(this).scrollTop()>260){
-        $('.slide-1 .intro').fadeOut();
-     }else{
-      $('.slide-1 .intro').fadeIn();
-    }
-
-    //Slide 2
-    if ($(this).scrollTop()>=300 && $(this).scrollTop()<800){
-        $('.slide-2 .caption.part1').fadeIn();
-    }else{     
-        $('.slide-2 .caption.part1').fadeOut();
-    }
-
-    if ($(this).scrollTop()>=800 && $(this).scrollTop()<1300){
-        $('.slide-2 .caption.part2').fadeIn();
-    }else{     
-        $('.slide-2 .caption.part2').fadeOut();
-    }      
-
-    //Slide 3
-    if ($(this).scrollTop()>1450 && $(this).scrollTop()<2300){
-        $('.slide-3 .caption').fadeIn();
-    }else{     
-      $('.slide-3 .caption').fadeOut();
-    }
-   
-   });
-}]);
 app.factory('autocompleteArrServ', [function () {
 
   var makeStatsArr = function (originArr) {
