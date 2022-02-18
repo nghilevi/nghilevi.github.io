@@ -19,7 +19,7 @@ module.exports = function(grunt){
 					'src/common/components/menu/menu.css',
 					'src/assets/fonts/fonts.css',
 					'src/about-me/about-me.css',
-					'src/my-work/my-work.css',
+					'src/pages/my-work/my-work.css',
 					'src/common/components/autocomplete/autocomplete.css',
 					],
 				dest: 'docs/app.css'
@@ -31,7 +31,7 @@ module.exports = function(grunt){
 					'src/common/components/menu/menu.js',
 					'src/about-me/about-me.js',
 					'src/common/components/autocomplete/autocomplete.js',
-					'src/my-work/my-work.js',
+					'src/pages/my-work/my-work.js',
 				],
 				dest: 'docs/app.js'
 			}
@@ -100,7 +100,7 @@ module.exports = function(grunt){
 					collapseWhitespace: true
 				},
 				files: {                                  
-					'docs/views/my-work.html': 'src/my-work/my-work.html',
+					'docs/views/my-work.html': 'src/pages/my-work/my-work.html',
 					'docs/views/about-me.html': 'src/about-me/about-me.html',
 					'docs/views/404.html': 'src/404/404.html'
 				}

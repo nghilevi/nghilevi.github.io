@@ -54,8 +54,8 @@ app.factory('autocompleteArrServ', [function () {
     }
 
   }])
-  .controller('my-work', ['$scope', '$http', 'autocompleteArrServ', 'back2Top', '$timeout',
-    function ($scope, $http, autocompleteArrServ, back2Top, $timeout) {
+  .controller('my-work', ['$scope', '$http', 'autocompleteArrServ', 'back2Top',
+    function ($scope, $http, autocompleteArrServ, back2Top) {
 
       //var savedData = JSON.parse(localStorage.getItem('lvnPortfolio1.0.12')),
       var savedData,
