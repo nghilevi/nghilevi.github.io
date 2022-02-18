@@ -102,7 +102,7 @@ module.exports = function(grunt){
 				files: {                                  
 					'docs/views/my-work.html': 'src/pages/my-work/my-work.html',
 					'docs/views/about-me.html': 'src/pages/about-me/about-me.html',
-					'docs/views/404.html': 'src/404/404.html'
+					'docs/views/404.html': 'src/pages/404/404.html'
 				}
 			},
 			'index': {                                      
