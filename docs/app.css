@@ -122,6 +122,39 @@ a.small {
   line-height: 100%;
   font-size: .9rem;
 }
+@keyframes glow-yellow {
+    from {
+      -webkit-box-shadow: 0 0 4px -4px yellow;
+      -moz-box-shadow: 0 0 4px -4px yellow;
+      box-shadow: 0 0 4px -4px yellow;
+    }
+    to {
+      -webkit-box-shadow: 0 0 4px 4px yellow;
+      -moz-box-shadow: 0 0 4px 4px yellow;
+      box-shadow: 0 0 4px 4px yellow;
+    }
+}
+
+@keyframes glow-white {
+  from {
+    -webkit-box-shadow: 0 0 5px -5px white;
+    -moz-box-shadow: 0 0 5px -5px white;
+    box-shadow: 0 0 5px -5px white;
+  }
+  to {
+    -webkit-box-shadow: 0 0 5px 5px white;
+    -moz-box-shadow: 0 0 5px 5px white;
+    box-shadow: 0 0 5px 5px white;
+  }
+}
+
+.glow-yellow {
+    animation: glow-yellow 1s infinite alternate;
+}
+
+.glow-white {
+  animation: glow-white 1s infinite alternate;
+}
 /* ---------------------------- Fixed element ----------------------- */
 /* --------------- Ribbon --------------- */
 .ribbon {

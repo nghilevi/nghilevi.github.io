@@ -1,7 +1,7 @@
 app.controller('menu', ['$scope','$location',function($scope,$location) {
   $(".menu").click(function() {
     $('html,body').scrollTop(0);
-    $(".menu .pointer").hide();
+    $(".menu").removeClass("glow-yellow");
   });
   $scope.location=$location;
   $scope.$watch('location.path()', function(path) {

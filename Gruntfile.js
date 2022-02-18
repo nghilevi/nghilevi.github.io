@@ -16,6 +16,7 @@ module.exports = function(grunt){
 			styles: {
 				src: [
 					'src/common/styles/reset.css',
+					'src/common/styles/glow.css',
 					'src/common/components/menu/menu.css',
 					'src/assets/fonts/fonts.css',
 					'src/pages/about-me/about-me.css',

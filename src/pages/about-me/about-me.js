@@ -1,10 +1,10 @@
-app.controller('about-me', ['$scope', function($scope) {
+app.controller('about-me', [function() {
   var s = skrollr.init();
   $(".avt").click(function() {
       $('html, body').animate({
           scrollTop: 310
       }, 400);
-      $(".avt .pointer").hide();
+      $(".avt").removeClass("glow-white");
   });
 
   $(".avt").hover(function() {

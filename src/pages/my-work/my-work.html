@@ -1,7 +1,7 @@
-<div class="search" class="search" ng-if="projects">
+<div class="search" ng-if="projects">
     <autocomplete 
       ng-model="query" 
-      attr-placeholder="Search my {{projects.length}}+ projects by keywords (e.g 'Web', Angular', 'React', 'Android', 'TypeScript', etc.)" 
+      attr-placeholder="Learn more about my {{projects.length}}+ (clickable) projects by searching using keywords e.g 'TypeScript', 'React', 'Angular', 'JavaScript', etc." 
       data="autocompleteData"
       on-type="onType"
       on-select="selectItem">
@@ -38,7 +38,7 @@
             <h3 title="Technologies">{{item.technologies}}</h3>
             <p>{{item.description}}</p>
             
-            <div class="links">
+            <div class="links glow-yellow">
               <div class="link" ng-repeat="link in item.links">
                   <a target="_blank" title="{{link.type}}" ng-href="{{link.url}}">
                     <img ng-src="./img/links/{{link.type}}.png">

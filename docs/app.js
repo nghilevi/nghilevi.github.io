@@ -22,7 +22,7 @@ app.config(['$routeProvider',function ($routeProvider) {
 app.controller('menu', ['$scope','$location',function($scope,$location) {
   $(".menu").click(function() {
     $('html,body').scrollTop(0);
-    $(".menu .pointer").hide();
+    $(".menu").removeClass("glow-yellow");
   });
   $scope.location=$location;
   $scope.$watch('location.path()', function(path) {
@@ -37,13 +37,13 @@ app.controller('menu', ['$scope','$location',function($scope,$location) {
   
 }]);
 
-app.controller('about-me', ['$scope', function($scope) {
+app.controller('about-me', [function() {
   var s = skrollr.init();
   $(".avt").click(function() {
       $('html, body').animate({
           scrollTop: 310
       }, 400);
-      $(".avt .pointer").hide();
+      $(".avt").removeClass("glow-white");
   });
 
   $(".avt").hover(function() {
@@ -454,6 +454,10 @@ app.factory('autocompleteArrServ', [function () {
   }])
   .controller('my-work', ['$scope', '$http', 'autocompleteArrServ', 'back2Top',
     function ($scope, $http, autocompleteArrServ, back2Top) {
+      
+      $(".links").hover(function() {
+        console.log('u hover me');
+      });
 
       //var savedData = JSON.parse(localStorage.getItem('lvnPortfolio1.0.12')),
       var savedData,
@@ -524,5 +528,5 @@ app.factory('autocompleteArrServ', [function () {
       }
 
       back2Top.init();
-
+      
     }]);
