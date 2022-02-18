@@ -18,7 +18,7 @@ module.exports = function(grunt){
 					'src/common/styles/reset.css',
 					'src/common/components/menu/menu.css',
 					'src/assets/fonts/fonts.css',
-					'src/about-me/about-me.css',
+					'src/pages/about-me/about-me.css',
 					'src/pages/my-work/my-work.css',
 					'src/common/components/autocomplete/autocomplete.css',
 					],
@@ -29,7 +29,7 @@ module.exports = function(grunt){
 					'src/app.module.js',
 					'src/app.route.js',
 					'src/common/components/menu/menu.js',
-					'src/about-me/about-me.js',
+					'src/pages/about-me/about-me.js',
 					'src/common/components/autocomplete/autocomplete.js',
 					'src/pages/my-work/my-work.js',
 				],
@@ -101,7 +101,7 @@ module.exports = function(grunt){
 				},
 				files: {                                  
 					'docs/views/my-work.html': 'src/pages/my-work/my-work.html',
-					'docs/views/about-me.html': 'src/about-me/about-me.html',
+					'docs/views/about-me.html': 'src/pages/about-me/about-me.html',
 					'docs/views/404.html': 'src/404/404.html'
 				}
 			},
