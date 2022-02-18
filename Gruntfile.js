@@ -54,7 +54,7 @@ module.exports = function(grunt){
 				// copy js
 				{	
 					src: 'src/common/lib/skrollr.min.js',
-					dest: 'docs/skrollr.min.js'
+					dest: 'docs/lib/skrollr.min.js'
 				},
 				// copy img
 				{
