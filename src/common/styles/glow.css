@@ -11,6 +11,19 @@
     }
 }
 
+@keyframes glow-blue {
+  from {
+    -webkit-box-shadow: 0 0 4px -4px blue;
+    -moz-box-shadow: 0 0 4px -4px blue;
+    box-shadow: 0 0 4px -4px blue;
+  }
+  to {
+    -webkit-box-shadow: 0 0 4px 4px blue;
+    -moz-box-shadow: 0 0 4px 4px blue;
+    box-shadow: 0 0 4px 4px blue;
+  }
+}
+
 @keyframes glow-white {
   from {
     -webkit-box-shadow: 0 0 5px -5px white;
@@ -30,4 +43,8 @@
 
 .glow-white {
   animation: glow-white 1s infinite alternate;
+}
+
+.glow-blue {
+  animation: glow-blue 1s infinite alternate;
 }

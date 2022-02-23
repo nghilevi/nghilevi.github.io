@@ -454,10 +454,6 @@ app.factory('autocompleteArrServ', [function () {
   }])
   .controller('my-work', ['$scope', '$http', 'autocompleteArrServ', 'back2Top',
     function ($scope, $http, autocompleteArrServ, back2Top) {
-      
-      $(".links").hover(function() {
-        console.log('u hover me');
-      });
 
       //var savedData = JSON.parse(localStorage.getItem('lvnPortfolio1.0.12')),
       var savedData,
@@ -501,6 +497,10 @@ app.factory('autocompleteArrServ', [function () {
       loadData(savedData, mode);
 
       ///////////////////////////////////////////////////////////////////////
+
+      $scope.onMouseover = function (e){
+        console.log('u hover: ',e.currentTarget.classList.remove('glow-blue'));
+      }
 
       $scope.flip = function ($event) {
         $($event.currentTarget).toggleClass("flipped");
