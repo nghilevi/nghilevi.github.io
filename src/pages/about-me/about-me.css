@@ -16,8 +16,8 @@
     border-right: .15em solid orange; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .12em; /* Adjust as needed */
     animation: typing 5s steps(80, end), blink-caret .75s step-end infinite;
+    width: 100%;
 }
 
 /* The typing effect */
@@ -98,7 +98,7 @@
 .intro{
     position: absolute;
     left:50%;
-    top: 10%;
+    top: -10%;
 }
 
 .intro h1{

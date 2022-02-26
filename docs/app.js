@@ -499,7 +499,7 @@ app.factory('autocompleteArrServ', [function () {
       ///////////////////////////////////////////////////////////////////////
 
       $scope.onMouseover = function (e){
-        console.log('u hover: ',e.currentTarget.classList.remove('glow-blue'));
+        e.currentTarget.classList.remove('glow-blue')
       }
 
       $scope.flip = function ($event) {
