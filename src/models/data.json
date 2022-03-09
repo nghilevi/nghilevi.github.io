@@ -17,9 +17,13 @@
             {
                 "type": "youtube",
                 "url": "https://youtu.be/6m8idTzO560"
+            },
+            {
+                "type": "folder",
+                "url": "https://2bvl.short.gy/nordea"
             }
         ],
-        "description": "Relationship Banking Online - new private netbank project for household customers",
+        "description": "Develop & improve web (hybrid) applications for Nordea's public facing services for all its private (11M) and corporate (600k) customers",
         "rankId": 0,
         "rating": 3
     },

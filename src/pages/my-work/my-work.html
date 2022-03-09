@@ -39,6 +39,7 @@
             <p>{{item.description}}</p>
             
             <div id={{item.name}} class="links glow-blue" ng-mouseover="onMouseover($event)">
+
               <div class="link" ng-repeat="link in item.links">
                   <a target="_blank" title="{{link.type}}" ng-href="{{link.url}}">
                     <img ng-src="./img/links/{{link.type}}.png">
