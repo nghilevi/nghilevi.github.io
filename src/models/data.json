@@ -1,38 +1,6 @@
 [
     {
         "_id": "abc",
-        "name": "eva-global",
-        "cat": "Web",
-        "year": "2023",
-        "technologies": "Angular, TypeScript, HTML5, CSS3, Sass, JavaScript",
-        "links": [
-            {
-                "type": "demo",
-                "url": "https://www.evaglobal.com/"
-            }
-        ],
-        "description": "EVA Global IAM application",
-        "rankId": 0,
-        "rating": 3
-    },
-    {
-        "_id": "abc",
-        "name": "nhc-ejar",
-        "cat": "Web",
-        "year": "2023",
-        "technologies": "Angular, TypeScript, HTML5, CSS3, Sass, JavaScript",
-        "links": [
-            {
-                "type": "demo",
-                "url": "https://www.ejar.sa/en"
-            }
-        ],
-        "description": "Maintain and develop new features for Housing rental platform for Kingdom of Saudi Arabia",
-        "rankId": 0,
-        "rating": 3
-    },
-    {
-        "_id": "abc",
         "name": "hoiwa",
         "cat": "Web",
         "year": "2023",
