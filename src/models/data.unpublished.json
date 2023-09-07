@@ -29,4 +29,20 @@
     "description": "Maintain and develop new features for Housing rental platform for Kingdom of Saudi Arabia",
     "rankId": 0,
     "rating": 3
-}
+},
+{
+    "_id": "abc",
+    "name": "hoiwa",
+    "cat": "Web",
+    "year": "2023",
+    "technologies": "VueJS, TypeScript, HTML5, CSS3, Sass, JavaScript",
+    "links": [
+        {
+            "type": "demo",
+            "url": "https://hoiwa.fi/"
+        }
+    ],
+    "description": "Redesign the architect for the company core operation  management system",
+    "rankId": 0,
+    "rating": 3
+},
