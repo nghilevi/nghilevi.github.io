@@ -133,6 +133,26 @@
     },
     {
         "_id": "null",
+        "name": "Movies Search",
+        "cat": "Web",
+        "year": 2023,
+        "technologies": "Angular, TypeScript, Sass",
+        "links": [
+            {
+                "type": "github",
+                "url": "https://github.com/nghilevi/movies-search/"
+            },
+            {
+                "type": "demo",
+                "url": "https://nghilevi.github.io/movies-search/"
+            }
+        ],
+        "description": "A lightweight and easy-to-use service cloud picker",
+        "rankId": 5,
+        "rating": 3
+    },
+    {
+        "_id": "null",
         "name": "Cloud Picker",
         "cat": "Web",
         "year": 2021,
