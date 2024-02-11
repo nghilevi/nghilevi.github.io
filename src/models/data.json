@@ -76,6 +76,102 @@
         "rating": 3
     },
     {
+        "_id": "abc",
+        "name": "loandcointeriors",
+        "cat": "Web",
+        "year": "2023-present",
+        "technologies": "Angular, TypeScript, GraphQL, Shopify, Prismic, HTML5, CSS3, Sass, JavaScript",
+        "links": [
+            {
+                "type": "demo",
+                "url": "https://loandcointeriors.com.au/"
+            }
+        ],
+        "description": "Lo & Co elevates everyday hardware into design objects. Founded by Arielle & Teegan, they offer unique, handcrafted pieces in a range of finishes and materials. Their passion for contemporary design shines through in every detail.",
+        "rankId": 0,
+        "rating": 3
+    },
+    {
+        "_id": "abc",
+        "name": "himac",
+        "cat": "Web",
+        "year": "2023-present",
+        "technologies": "Angular, TypeScript, Shopify, Hubspot, HTML5, CSS3, Sass, JavaScript",
+        "links": [
+            {
+                "type": "demo",
+                "url": "https://himac.com.au/"
+            }
+        ],
+        "description": "Himac offers tough, reliable attachments for your earthmoving & agricultural machinery. Over 85% Australian-made, they fit Skid Steers, Loaders, Excavators & more, from top brands like Bobcat & John Deere.",
+        "rankId": 0,
+        "rating": 3
+    },
+    {
+        "_id": "abc",
+        "name": "the coffee company",
+        "cat": "Web",
+        "year": "2023-present",
+        "technologies": "Angular, TypeScript, Shopify, Hubspot, HTML5, CSS3, Sass, JavaScript",
+        "links": [
+            {
+                "type": "demo",
+                "url": "https://coffeecompany.com.au/"
+            }
+        ],
+        "description": "Dive into a world of flavor! This store meticulously roasts 50+ coffees daily, sourcing beans from global leaders. Their selection caters to every taste, offering single-origin, blends, and green beans. They even boast 100+ teas for a truly diverse experience. Coffee or tea lover? This is your haven.",
+        "rankId": 0,
+        "rating": 3
+    },
+    {
+        "_id": "abc",
+        "name": "made by fresko",
+        "cat": "Web",
+        "year": "2023-present",
+        "technologies": "Angular, TypeScript, Shopify, Hubspot, HTML5, CSS3, Sass, JavaScript",
+        "links": [
+            {
+                "type": "demo",
+                "url": "https://au.madebyfressko.com/"
+            }
+        ],
+        "description": "Fressko offers stylish, sustainable alternatives to disposable cups and bottles. Their Melbourne-designed flasks and coffee cups are BPA-free, high-quality, and eco-conscious, making it easy to live healthy and consciously. Ditch the plastic, embrace mindful style with Fressko.",
+        "rankId": 0,
+        "rating": 3
+    },
+    {
+        "_id": "abc",
+        "name": "smash",
+        "cat": "Web",
+        "year": "2023-present",
+        "technologies": "Angular, TypeScript, Shopify, Hubspot, HTML5, CSS3, Sass, JavaScript",
+        "links": [
+            {
+                "type": "demo",
+                "url": "https://smashproducts.com/"
+            }
+        ],
+        "description": "Smash® creates sustainable products that makes everyday life easier. From lunch boxes and cooler bags to water bottles and food storage to reusable coffee cups and food flasks - Smash® has all your reusable product needs covered!",
+        "rankId": 0,
+        "rating": 3
+    },
+    {
+        "_id": "abc",
+        "name": "carwyn-cellars",
+        "cat": "Web",
+        "year": "2023-present",
+        "technologies": "Angular, TypeScript, Shopify, Hubspot, HTML5, CSS3, Sass, JavaScript",
+        "links": [
+            {
+                "type": "demo",
+                "url": "https://carwyncellars.com.au/"
+            }
+        ],
+        "description": "Thornbury's CARWYN CELLARS: Independent since 2007, supporting small-batch craft beer, wine & spirits. Discover local brews, globally renowned ales, curated wines, and top-shelf spirits. Your neighborhood gem for the discerning drinker.",
+        "rankId": 0,
+        "rating": 3
+    },
+    {
         "_id": "55239b8bebd4f06aa95fed08",
         "name": "Ventoura",
         "cat": "Mobile",
